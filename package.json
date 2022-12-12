@@ -1,0 +1,22 @@
+{
+  "name": "cybersecurity",
+  "version": "1.0.0",
+  "description": "A secure web application that is immune to some of the OWASP Top 10 2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarioDou7/OWASP-IMMUNE-WEB-APPLICATION.git"
+  },
+  "author": "Mario Mamdouh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarioDou7/OWASP-IMMUNE-WEB-APPLICATION/issues"
+  },
+  "homepage": "https://github.com/MarioDou7/OWASP-IMMUNE-WEB-APPLICATION#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
