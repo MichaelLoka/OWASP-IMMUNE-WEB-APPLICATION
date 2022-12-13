@@ -8,6 +8,18 @@ app.get('/', (req, res) => {        //get requests to the root ("/") will route 
                                                         //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
 });
 
+app.post("/register.html",(req,res) => {
+    //some code to add the data in the sql database
+    res.sendFile("Login.html", {root:__dirname});
+})
+
+app.post("/Login.html",(req,res) => {
+    //some code to check if the data in the system 
+
+    //if doesn't exist send 404 (Not Found)
+    res.sendStatus(404);
+})
+
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port ${port}`); 
 });
