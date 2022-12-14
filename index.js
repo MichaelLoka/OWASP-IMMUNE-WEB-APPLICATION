@@ -8,18 +8,31 @@ app.get('/', (req, res) => {        //get requests to the root ("/") will route 
                                                         //the .sendFile method needs the absolute path to the file, see: https://expressjs.com/en/4x/api.html#res.sendFile 
 });
 
-app.post("/register.html",(req,res) => {
-    //some code to add the data in the sql database
+app.post("/Register.html",(req,res) => {
+  
     res.sendFile("Login.html", {root:__dirname});
 })
 
 app.post("/Login.html",(req,res) => {
+      //hash password and store on database
+    // check for injection xss and sql
+    
+    //some code to add the data in the sql database
+
     //some code to check if the data in the system 
 
-    //if doesn't exist send 404 (Not Found)
-    res.sendStatus(404);
+    res.sendFile("Login.html", {root:__dirname});
 })
-
+try {
+    app.post("/manageusers",(req,res) => {
+        // check for injection xss and sql
+        //if doesn't exist send 404 (Not Found)
+        res.statusCode(404);
+    })
+        
+} catch (error) {
+    console.log(error)
+}
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port ${port}`); 
 });
